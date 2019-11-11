@@ -5,6 +5,14 @@ var LineChartOption = {
     title: {
         text: ''
     },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
     xAxis: {
         type: 'category',
         data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec']
@@ -37,11 +45,6 @@ var PieOption = {
         show : true,
         feature : {
             mark : {show: true},
-            dataView : {show: true, readOnly: false},
-            magicType : {
-                show: true,
-                type: ['pie', 'funnel']
-            },
             restore : {show: true},
             saveAsImage : {show: true}
         }
