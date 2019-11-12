@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>HCI 330 Charts</title>
-    <link rel="stylesheet" type="text/css" href="./static/css/charts.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./static/css/charts.css"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.3.0/echarts-en.common.min.js" integrity="sha256-tsVDzsmKgOLF4O5QZx9VnlZlIVa82Cfj0COaPXhSoXE=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -16,21 +16,23 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="./index.html">Application Name</a>
         </div>
+        <div>
+            <ul class = "nav navbar-nav">
+                <li><a href="./index.html">Home</a></li>
+                <li class = "active"><a href="./charts.html">charts</a></li>
+            </ul>
+        </div>
     </div>
 </nav>
     <div class = "container-fluid">
         <div class = "row">
-            <div class = "col-sm-2 col-md-2 col-lg-2">
-                <p>Home</p>
-            </div>
-            <div class = "col-sm-10 col-md-10 col-lg-10 text-center">
+            <div id = "changeChartBtnDiv" class = "col-sm-12 col-md-12 col-lg-12">
                 <div id = "changeChartBtnGroup" class = "btn-group">
                     <button id = "changeChartBtn" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">LineChart
-                        <span class="caret"></span>
                     </button>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">LineChart</a></li>
-                        <li><a href="#">Pie</a></li>
+                    <ul id = "ChartType" class="dropdown-menu" role="menu">
+                        <li><a href="#" onclick="changeLineChart()">LineChart</a></li>
+                        <li><a href="#" onclick="changePie()">Pie</a></li>
                     </ul>
                 </div>
 

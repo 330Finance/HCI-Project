@@ -13,3 +13,19 @@
     width: 100%;
     height: 600px;
 }
+
+#changeChartBtnDiv {
+    text-align: center;
+}
+
+#changeChartBtn {
+    width: 100px;
+}
+
+#ChartType {
+    min-width: 100%;
+    text-align: center;
+}
+
+
+
