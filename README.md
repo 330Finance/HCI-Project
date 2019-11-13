@@ -1,4 +1,7 @@
 # HCI-Project
 FINANCE
 
-xuzhu 给爷爪巴
+**Component**
+
+
+[Charts](https://330finance.github.io/HCI-Project/charts.html)
