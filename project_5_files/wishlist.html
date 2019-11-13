@@ -1,0 +1,303 @@
+
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>WishList</title>
+  </head>
+  <body>
+
+  	<script>
+	  	var rank;
+	
+	function update() {
+var r=rank.value
+		var a1=document.getElementById("name"+r)
+		var a2=document.getElementById("price"+r)
+		var a3=document.getElementById("time"+r)
+		var a4=document.getElementById("description"+r)
+		var a5=document.getElementById("money"+r)
+
+		var b1=document.getElementById("name").value
+		var b2=document.getElementById("price").value
+		var b3=document.getElementById("time").value
+		var b4=document.getElementById("description").value
+		a1.innerHTML=b1
+		a2.innerHTML=b2
+		a3.innerHTML=b3
+		a4.innerHTML=b4
+		a5.innerHTML=Math.ceil(b2/b3)
+	}
+function disp_prompt()
+{
+	var name=prompt("请输入您的名字","xxx"); // 弹出input框
+	alert(name);
+}
+function f1()
+{
+ rank=document.getElementById("rank")
+}
+function del()
+{
+ var rr=document.getElementById("delrank").value
+		var a1=document.getElementById("name"+rr)
+		var a2=document.getElementById("price"+rr)
+		var a3=document.getElementById("time"+rr)
+		var a4=document.getElementById("description"+rr)
+		var a5=document.getElementById("money"+rr)
+		a1.innerHTML="Product Name"
+		a2.innerHTML=""
+		a3.innerHTML=""
+		a4.innerHTML=""
+		a5.innerHTML=""
+}
+</script>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Please input the rank number you want to add/modify</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+ <input type="text" class="form-control" id="rank">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+ <button type="button" class="btn btn-danger" data-toggle="modal" onclick="f1()" data-target="#exampleModalCenter" data-dismiss="modal">
+  Save changes
+</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Please input the rank number you want to delete</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+ <input type="text" class="form-control" id="delrank">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+ <button type="button" class="btn btn-danger" data-toggle="modal" onclick="del()" data-dismiss="modal">
+  Save changes
+</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Name:</label>
+            <input type="text" class="form-control" id="name">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Price:</label>
+            <input type="text" class="form-control" id="price">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Time limit:</label>
+            <input type="text" class="form-control" id="time">
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Description:</label>
+            <input type="text" class="form-control" id="description">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="update()" data-dismiss="modal">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+ <div class="row">
+  <div class="col-md-4"><button type="button" class="btn btn-info" >
+  Back
+</button></div>
+  <div class="col-md-4 text-center content"><h1 >WishList</h1></div>
+  <div class="col-md-4"></div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+<div class="panel panel-default">
+    <div class="panel-heading"><h2>Rank 1</h2></div>
+    <div class="panel-body">
+        <p class="bg-primary"><h3 id="name1">Product Name:</h3>
+        </p>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">Price:<div id="price1"></div></li>
+        <li class="list-group-item">Time limit:<div id="time1"></div></li>
+        <li class="list-group-item">Description:<div id="description1"></div></li>
+        <li class="list-group-item">Money saved per day:<div id="money1"></div></li>
+    </ul>
+</div></div>
+    <div class="col-md-4">
+<div class="panel panel-default">
+    <div class="panel-heading"><h2>Rank 2</h2></div>
+    <div class="panel-body">
+        <p class="bg-primary"><h3 id="name2">Product Name:</h3>
+        </p>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">Price:<div id="price2"></div></li>
+        <li class="list-group-item">Time limit:<div id="time2"></div></li>
+        <li class="list-group-item">Description:<div id="description2"></div></li>
+        <li class="list-group-item">Money saved per day:<div id="money2"></div></li>
+    </ul>
+</div></div>  <div class="col-md-4">
+<div class="panel panel-default">
+    <div class="panel-heading"><h2>Rank 3</h2></div>
+    <div class="panel-body">
+        <p class="bg-primary"><h3 id="name3">Product Name:</h3>
+        </p>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">Price:<div id="price3"></div></li>
+        <li class="list-group-item">Time limit:<div id="time3"></div></li>
+        <li class="list-group-item">Description:<div id="description3"></div></li>
+        <li class="list-group-item">Money saved per day:<div id="money3"></div></li>
+    </ul>
+</div></div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-4">
+<div class="panel panel-default">
+    <div class="panel-heading"><h2>Rank 4</h2></div>
+    <div class="panel-body">
+        <p class="bg-primary"><h3 id="name4">Product Name:</h3>
+        </p>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">Price:<div id="price4"></div></li>
+        <li class="list-group-item">Time limit:<div id="time4"></div></li>
+        <li class="list-group-item">Description:<div id="description4"></div></li>
+        <li class="list-group-item">Money saved per day:<div id="money4"></div></li>
+    </ul>
+</div></div>
+    <div class="col-md-4">
+<div class="panel panel-default">
+    <div class="panel-heading"><h2>Rank 5</h2></div>
+    <div class="panel-body">
+        <p class="bg-primary"><h3 id="name2">Product Name:</h3>
+        </p>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">Price:<div id="price5"></div></li>
+        <li class="list-group-item">Time limit:<div id="time5"></div></li>
+        <li class="list-group-item">Description:<div id="description5"></div></li>
+        <li class="list-group-item">Money saved per day:<div id="money5"></div></li>
+    </ul>
+</div></div>  <div class="col-md-4">
+<div class="panel panel-default">
+    <div class="panel-heading"><h2>Rank 6</h2></div>
+    <div class="panel-body">
+        <p class="bg-primary"><h3 id="name6">Product Name:</h3>
+        </p>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item">Price:<div id="price6"></div></li>
+        <li class="list-group-item">Time limit:<div id="time6"></div></li>
+        <li class="list-group-item">Description:<div id="description6"></div></li>
+        <li class="list-group-item">Money saved per day:<div id="money6"></div></li>
+    </ul>
+</div></div>
+</div>
+
+
+<!-- <footer class="footer navbar-fixed-bottom ">
+    	<div class="row">
+  <div class="col-md-4 text-center content"><button type="button" class="btn btn-default" >
+  AddNew
+</button></div>
+  <div class="col-md-4 text-center content"><h1 >WishList</h1></div>
+  <div class="col-md-4 text-center content"><button type="button" class="btn btn-default" >
+  Remove
+</button></div>
+</div>
+
+</footer> -->
+<!-- Footer -->
+<footer class="page-footer font-small unique-color-dark pt-4 fixed-bottom">
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!-- Call to action -->
+    <!-- <ul class="list-unstyled list-inline text-center py-2">
+      <li class="list-inline-item">
+        <h5 class="mb-1">Register for free</h5>
+      </li>
+      <li class="list-inline-item">
+        <a href="#!" class="btn btn-outline-white btn-rounded">Sign up!</a>
+      </li>
+    </ul> -->
+    <!-- Call to action -->
+
+<div class="row">
+  <div class="col-md-4 text-center content"><button  type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
+  Add
+</button></div> 
+  <div class="col-md-4 text-center content"><h1 >WishList</h1></div>
+  <div class="col-md-4 text-center content"><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal2">
+  Remove
+</button>
+<!-- Modal -->
+
+
+
+
+
+
+</div>
+</div>
+  </div>
+  <!-- Footer Elements -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+    <a href="https://mdbootstrap.com/education/bootstrap/"> LajiHCI.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
