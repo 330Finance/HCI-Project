@@ -1,0 +1,62 @@
+
+body {
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border-color: #D3D3D3;
+  background-color: #FFFFFF;
+}
+
+.navbar-header .navbar-brand {
+  border-top: 2px solid transparent;
+}
+
+.navbar-inverse .nav-right>li>a {
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+  margin-left: 25px;
+  padding: 40px auto 40px auto;
+  border-top: 2px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+.navbar-inverse .nav-right>li>a:hover,
+.navbar-inverse .nav-right>li>a:focus {
+  letter-spacing: 0.8px;
+  border-bottom: 3px solid #FFFFFF;
+  text-decoration: none;
+}
+.navbar-inverse .nav-right .nav-bookkeeping > a {
+  border-bottom: 3px solid #FFFFFF;
+}
+
+/* logo position */
+.navbar-brand {
+  padding-left: 10px;
+  padding-top: 0px;
+}
+
+
+
+/*Add Transactions Form */
+.addtrans{
+  margin-top: 3px;
+  border-left-color: #00a5f6;
+  border-left-width: 3px;
+  border-left-style: solid;
+  padding-bottom: 300px;
+}
+
+/*.category {
+    width: 50%;
+    text-align: center;
+}*/
+
+.caret {
+  float: right;
+}

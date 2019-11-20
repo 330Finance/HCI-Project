@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta name="description" content="Bookkeeping section">
+  	<meta name="author" content="yyy">
+
+  	<!-- bootstrap -->
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  	<!-- datepicker -->
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+  	<!-- datatables -->
+  	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+  	<link rel="stylesheet" type="text/css" href="bookkeeping.css">
+
+
+	<title>Bookkeeping</title>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top navbar-dark bg-primary" >
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="../index.html">
+					Home
+				</a>
+			</div>
+
+			<div id="navbar">
+			<!-- <div id="navbar" class="collapse navbar-collapse"> -->
+			<ul class="nav  nav-right">
+				<li class="nav-bookkeeping"><a href="bookkeeping.html">Bookkeeping</a></li>
+				<li class="nav-chart"><a href="../charts.html">Charts</a></li>
+				<li class="nav-wishlist"><a href="../wishlist.html">Wishlist</a></li>
+				<li class="nav-convert"><a href="#">Convert</a></li>
+				<li><a href="">Log Out</a></li>
+			</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-9 col-md-9 main" id="transactionstable">
+				<h1 class="page-header">Bookkeeping</h1>
+				<table id='bookkeepings' class="table table-striped">
+					<thead>
+						<tr>
+							<th>Date</th>
+							<th>Desription</th>
+							<th>Category</th>
+							<th>Amount</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+				            <td>11/10/2019</td>
+				            <td>Amazon</td>
+				            <td>Clothing</td>
+				            <td>10.00</td>
+				        </tr>
+				        <tr>
+				            <td>11/11/2019</td>
+				            <td>TraderJoe's</td>
+				            <td>Groceries</td>
+				            <td>30.12</td>
+				        </tr>
+				        <tr>
+				            <td>11/5/2019</td>
+				            <td>Amazon</td>
+				            <td>Book</td>
+				            <td>50.12</td>
+				        </tr>
+				        <tr>
+				            <td>11/9/2019</td>
+				            <td>Joy Yee</td>
+				            <td>Food</td>
+				            <td>15.01</td>
+				        </tr>
+				        <tr>
+				            <td id="newdate1"> </td>
+				            <td id="newdesp1"> </td>
+				            <td id="newcate1"> </td>
+				            <td id="newamount1"> </td>
+				        </tr>
+				       <!--  <tr>
+				            <td id="newdate2"> </td>
+				            <td id="newdesp2"> </td>
+				            <td id="newcate2"> </td>
+				            <td id="newamount2"> </td>
+				        </tr> -->
+					</tbody>
+				</table>
+			</div>
+
+			<div class="col-sm-3 col-md-3 addtrans">
+				<h1 class="page-header">Add a Transaction</h1>
+				<div class="form-group">
+					<div class="input-group date" data-provide="datepicker" data-date-format="mm/dd/yyyy">
+    					<input type="text" class="form-control" id="add-date" placeholder="Date" required>
+    					<div class="input-group-addon">
+        					<span class="glyphicon glyphicon-th"></span>
+    					</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<input type="text" class="form-control" id="add-desp" placeholder="Description">
+				</div>
+
+				<div class="btn-group">
+					<button type="button" class="btn btn-default dropdown-toggle category" id="categorydrop" data-toggle="dropdown">Choose the category<span class="caret"></span></button>
+					<ul class="dropdown-menu" role="menu">
+						<li id="choice1"><a href="#">Food</a></li>
+						<li id="choice2"><a href="#">Book</a></li>
+						<li id="choice3"><a href="#">Clothing</a></li>
+						<li id="choice4"><a href="#">Groceries</a></li>
+					</ul>
+				</div>
+
+				<div class="form-group">
+					<input type="text" class="form-control" id="add-amount" placeholder="Amount" required>
+				</div>
+
+				<div class="form-group">
+					<button class="btn btn-success btn-block" onclick="addTransaction();">Add</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+	<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="bookkeeping.js"></script>
+</body>
+</html>
