@@ -1,0 +1,61 @@
+html,body {
+	height:100%;
+	width:100%;
+	background: -webkit-linear-gradient(#006699 0%, #ffffff 100%);
+	background: -o-linear-gradient(#006699 0%, #ffffff 100%);
+	background: linear-gradient(#006699 0%, #ffffff 100%);
+	overflow: hidden;
+}
+
+.logo{
+	display:block;
+	margin:auto;
+}
+.title{
+	text-align: center;
+}
+.row{
+ 	z-index: 2;
+	position:relative;
+	height:520px;
+	width:100%;
+	margin-top: 50px;
+}
+
+.column{
+	margin:0px auto;
+	padding:15px;
+	width:400px;
+	border: 2px solid rgba(255,255,255,0.8);
+	border-radius: 5px;
+	background-color: rgba(255,255,255,0.3);
+	text-align: left;
+}
+
+.footer{
+ 	color:#006699;
+ 	z-index: 2;
+	text-align: center;
+	bottom: 20px;
+	position: absolute; 
+	width: 100%;
+}
+
+#footerbkgd{
+	background: url(./cloud.png) repeat;
+	width: 100%;
+	height: 350px;
+	z-index:1;
+	bottom:0px;
+	position:absolute;
+	animation: ani 60s linear infinite alternate;
+}
+
+@keyframes ani { 
+	0%{background-position:top left} 
+	100%{background-position:top right} 
+}
+
+#agreementContent{
+	text-align: justify;
+}

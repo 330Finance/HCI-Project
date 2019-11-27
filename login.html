@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Log In</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="./bootstrapValidator.js"></script>
+  <link href="./bootstrapValidator.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./Sign.css">
+  <script src="./login.js"></script>
+</head>
+
+<body>
+  <div class="row">
+    <div class="column">
+      <img src="./Isave.png" class="logo" alt="Isave">
+      <h1 class="title">User Authentication</h1>
+
+      <form action="./index.html" class="needs-validation" id="formform">
+        <div class="form-group">
+          <label for="username">Username: / E-mail</label>
+          <input type="text" class="form-control" id="username" name="usr" placeholder="Username or E-mail">
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" id="password" name="pwd" placeholder="password">
+        </div>
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox"> Remember Me
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-info">Log In</button>
+        <button type="button" class="btn btn-info" id="jumpregister">Register</button>
+      </form>
+    </div>
+  </div>
+  <p class="footer">@ EECS330 HCI Group: Finance</p>
+  <div id="footerbkgd"></div>
+
+</body>
+</html>
