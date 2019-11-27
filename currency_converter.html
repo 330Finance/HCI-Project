@@ -16,8 +16,62 @@
          span, option, input {
             font-size:25px;
          }
-      </style>
+		 .head-bar {
+			height: 8.5%;
+			width: 100%;
+			margin: 15px 0px;
+			padding: 0px;
+			border: none;
+			border-radius: 1px;
+			text-align:center;
+			text-shadow:2px 2px #000000;
+			background-color: #808080;
+			color: #FFFFFF;
+			font-family:"Times New Roman";
+		 }
 
+		 .back-button {
+			 float:left;
+			 width: 60px;
+			 height: 40px;
+			 display: inline-block;
+			 border-radius: 5px;
+             background-color: #c0c0c0;
+			 border: none;
+			 color: #FFFFFF;
+			 text-align: center;
+			 font-size: 10px;
+			 padding: 0px;
+			 transition: all 0.5s;
+			 cursor: pointer;
+			 margin: 2px;
+		 }
+
+		 .back-button span {
+			 cursor: pointer;
+			 display: inline-block;
+			 position: relative;
+			 transition: 0.5s;
+		 }
+
+		 .back-button span:after {
+			 position: absolute;
+			 right: 0px;
+			 transition: 0.5s;
+		 }
+
+		 .back-button:hover span {
+			 padding-right: 20px;
+		 }
+
+		 .back-button:hover span:after {
+			 opacity: 0;
+			 right: 2px;
+		 }
+      </style>
+	  <div class="head-bar">
+		<button class="back-button"><span> &#8592; </span></button>  					
+      </div>
       <div id = "databinding" style = "">
          <h2>Currency Converter</h2>
          <span>Input:</span><input type = "number" v-model.number = "amount" placeholder = "Input Amount..." /><br/><br/>
