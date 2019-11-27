@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <title>Currency Converter</title>
+      <script type = "text/javascript" src = " https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js"></script>
+   </head>
+   <body>
+      <style>
+         #databinding{
+            padding: 20px 15px 15px 15px;
+            margin: 0 0 25px 0;
+            width: auto;
+            background-color: #e7e7e7;
+         }
+         span, option, input {
+            font-size:25px;
+         }
+		 .head-bar {
+			height: 8.5%;
+			width: 100%;
+			margin: 15px 0px;
+			padding: 0px;
+			border: none;
+			border-radius: 1px;
+			text-align:center;
+			text-shadow:2px 2px #000000;
+			background-color: #808080;
+			color: #FFFFFF;
+			font-family:"Times New Roman";
+		 }
+
+		 .back-button {
+			 float:left;
+			 width: 60px;
+			 height: 40px;
+			 display: inline-block;
+			 border-radius: 5px;
+             background-color: #c0c0c0;
+			 border: none;
+			 color: #FFFFFF;
+			 text-align: center;
+			 font-size: 10px;
+			 padding: 0px;
+			 transition: all 0.5s;
+			 cursor: pointer;
+			 margin: 2px;
+		 }
+
+		 .back-button span {
+			 cursor: pointer;
+			 display: inline-block;
+			 position: relative;
+			 transition: 0.5s;
+		 }
+
+		 .back-button span:after {
+			 position: absolute;
+			 right: 0px;
+			 transition: 0.5s;
+		 }
+
+		 .back-button:hover span {
+			 padding-right: 20px;
+		 }
+
+		 .back-button:hover span:after {
+			 opacity: 0;
+			 right: 2px;
+		 }
+      </style>
+	  <div class="head-bar">
+	  <a href="./index.html">
+		<button class="back-button"><span> &#8592; </span></button>  
+      </a>		
+      </div>
+      <div id = "databinding" style = "">
+         <h2>Currency Converter</h2>
+         <span>Input:</span><input type = "number" v-model.number = "amount" placeholder = "Input Amount..." /><br/><br/>
+         <span>Origin:</span>
+         <select v-model = "convertfrom" style = "width:300px;font-size:25px;">
+            <option v-for = "(a, index) in currencyfrom"  v-bind:value = "a.name">{{a.desc}}</option>
+         </select>
+         <span>convert to:</span>
+         <select v-model = "convertto" style = "width:300px;font-size:25px;">
+            <option v-for = "(a, index) in currencyfrom" v-bind:value = "a.name">{{a.desc}}</option>
+         </select><br/><br/>
+         <span> {{amount}} {{convertfrom}} = {{finalamount}} {{convertto}}</span>
+      </div>
+
+      <script type = "text/javascript">
+         var vm = new Vue({
+            el: '#databinding',
+            data: {
+               name:'',
+               currencyfrom : [
+                  {name: "USD", desc:"USD"},
+                  {name:"EUR", desc:"EUR"},
+                  {name:"RMB", desc:"RMB"},
+                  {name:"HKD", desc:"HKD"}
+               ],
+               convertfrom: "USD",
+               convertto:"RMB",
+               amount :""
+            },
+            computed :{
+               finalamount:function() {
+                  var to = this.convertto;
+                  var from = this.convertfrom;
+                  var final;
+                  switch(from) {
+                     case "RMB":
+                     if (to == "USD") {
+                        final = this.amount * 0.152;
+                     }
+                     if (to == "EUR") {
+                        final = this.amount * 0.013;
+                     }
+                     if (to == "RMB") {
+                        final = this.amount;
+                     }
+                     if (to == "HKD") {
+                        final = this.amount * 0.0059;
+                     }
+                     break;
+                     case "USD":
+                     if (to == "RMB") {
+                        final = this.amount * 6.58;
+                     }
+                     if (to == "EUR") {
+                        final = this.amount * 0.84;
+                     }
+                     if (to == "USD") {
+                        final = this.amount;
+                     }
+                     if (to == "HKD") {
+                        final = this.amount * 0.38;
+                     }
+                     break;
+                     case "EUR":
+                     if (to == "RMB") {
+                        final = this.amount * 76.22;
+                     }
+                     if (to == "USD") {
+                        final = this.amount * 1.19;
+                     }
+                     if (to == "EUR") {
+                        final = this.amount;
+                     }
+                     if (to == "HKD") {
+                        final = this.amount * 0.45;
+                     }
+                     break;
+                     case "HKD":
+                     if (to == "RMB") {
+                        final = this.amount *169.44;
+                     }
+                     if (to == "USD") {
+                        final = this.amount * 2.65;
+                     }
+                     if (to == "EUR") {
+                        final = this.amount * 2.22;
+                     }
+                     if (to == "HKD") {
+                        final = this.amount;
+                     }
+                     break
+                  }
+                  return final;
+               }
+            }
+         });
+      </script>
+   </body>
+</html>
