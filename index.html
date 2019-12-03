@@ -9,30 +9,53 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./NavBar.css">
+  <style>
+  .row{
+  margin-top: 200px;
+  position:relative;
+  height:520px;
+  width:100%;
+}
+
+.column{
+  margin:0px auto;
+
+  text-align: center;
+}
+
+.heading1{
+  font-size: 200px;
+}
+</style>
   <title>HOME</title>
 </head>
 
 <body>
-  <div class="container-fluid">
-    <nav class="navbar navbar-inverse navbar-fixed-top navbar-dark bg-primary" >
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href='index.html'>
-            Home
-          </a>
-        </div>
 
-        <div id="navbar">
-        <ul class="nav  nav-right">
-          <li class="nav-bookkeeping"><a href="./bookkeeping/bookkeeping.html">Bookkeeping</a></li>
-          <li class="nav-chart"><a href="./charts.html">Charts</a></li>
-          <li class="nav-wishlist"><a href="./wishlist.html">Wishlist</a></li>
-          <li class="nav-convert"><a href="./currency_converter.html">Convert</a></li>
-          <li class="nav-login"><a href="./login.html">My Account</a></li>
-        </ul>
-        </div>
+  <nav class="navbar navbar-inverse navbar-fixed-top navbar-dark bg-primary" >
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href='index.html'>
+          Home
+        </a>
       </div>
-    </nav>
+
+      <div id="navbar">
+      <ul class="nav  nav-right">
+        <li class="nav-bookkeeping"><a href="./bookkeeping/bookkeeping.html">Bookkeeping</a></li>
+        <li class="nav-chart"><a href="./charts.html">Charts</a></li>
+        <li class="nav-wishlist"><a href="./wishlist.html">Wishlist</a></li>
+        <li class="nav-convert"><a href="./currency_converter.html">Convert</a></li>
+        <li class="nav-login"><a href="./login.html">Log Out</a></li>
+      </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="row">
+    <div class="column">
+      <h1> My monthly Balance is</h1>
+      <p class="heading1"> 500$</p>
+    </div>
   </div>
 
   <!--     <input id = "in" type="text"><br>
