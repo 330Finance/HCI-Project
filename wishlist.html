@@ -4,16 +4,28 @@
 
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <meta charset="utf-8"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+<!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> -->
 
+
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./NavBar.css">
     <title>WishList</title>
   </head>
   <body>
 
+    
   	<script>
 	  	var rank;
 	
@@ -37,8 +49,8 @@ var r=rank.value
 	}
 function disp_prompt()
 {
-	var name=prompt("请输入您的名字","xxx"); // 弹出input框
-	alert(name);
+
+	alert("wishlist is used to record your wish product");
 }
 function f1()
 {
@@ -59,6 +71,36 @@ function del()
 		a5.innerHTML=""
 }
 </script>
+
+
+
+
+
+ <!-- <div class="container-fluid"> -->
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-dark bg-primary" >
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href='index.html'>
+            Home
+          </a>
+        </div>
+
+        <div id="navbar">
+        <ul class="nav  nav-right">
+          <li class="nav-bookkeeping"><a href="./bookkeeping/bookkeeping.html">Bookkeeping</a></li>
+          <li class="nav-chart"><a href="./charts.html">Charts</a></li>
+          <li class="nav-wishlist"><a href="./wishlist.html">Wishlist</a></li>
+          <li class="nav-convert"><a href="./currency_converter.html">Convert</a></li>
+          <li><a href="#">My Account</a></li>
+        </ul>
+        </div>
+      </div>
+    </nav>
+  <!-- </div> -->
+
+
+
+
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -136,17 +178,6 @@ function del()
       </div>
     </div>
   </div>
-</div>
-
-
-
- <div class="row">
- <a href="./index.html">
-  <div class="col-md-4"><button type="button" class="btn btn-info" >
-  Back
-</button></div></a>
-  <div class="col-md-4 text-center content"><h1 >WishList</h1></div>
-  <div class="col-md-4"></div>
 </div>
 <div class="row">
   <div class="col-md-4">
@@ -250,7 +281,7 @@ function del()
 
 </footer> -->
 <!-- Footer -->
-<footer class="page-footer font-small unique-color-dark pt-4 fixed-bottom">
+<footer class="page-footer font-small unique-color-dark pt-4">
 
   <!-- Footer Elements -->
   <div class="container">
@@ -265,7 +296,6 @@ function del()
       </li>
     </ul> -->
     <!-- Call to action -->
-
 <div class="row">
   <div class="col-md-4 text-center content"><button  type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
   Add
@@ -287,8 +317,12 @@ function del()
   <!-- Footer Elements -->
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2019 Copyright:
-    <a href="https://mdbootstrap.com/education/bootstrap/"> LajiHCI.com</a>
+  <div class="footer-copyright text-center py-3">
+
+        <button type="button" class="btn btn-default btn-sm" onclick="disp_prompt()">
+          <span class="glyphicon glyphicon-question-sign"></span> Question-sign
+        </button>
+     
   </div>
   <!-- Copyright -->
 
@@ -300,5 +334,7 @@ function del()
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
   </body>
 </html>
