@@ -12,12 +12,22 @@
         }
     }
 
+    var i = 1;
     function addTransaction(){
+        // var addDate = document.getElementById("add-date").value;
+        // var addDescription = document.getElementById("add-desp").value;
+        // var addAmount = document.getElementById("add-amount").value;
+        // var addCategory = display.innerHTML;
+        // confirm("New Transaction:\n" + "Date:" + addDate + "\n" + "Description:" + addDescription +"\n" 
+        //             + "Amount:" + addAmount + "\n" + "Category:" + addCategory);
         var addDate = document.getElementById("add-date").value;
         var addDescription = document.getElementById("add-desp").value;
         var addAmount = document.getElementById("add-amount").value;
         var addCategory = display.innerHTML;
-        confirm("New Transaction:\n" + "Date:" + addDate + "\n" + "Description:" + addDescription +"\n" 
-                    + "Amount:" + addAmount + "\n" + "Category:" + addCategory);
+        document.getElementById("newdate" + i).innerHTML = addDate;
+        document.getElementById("newdesp" + i).innerHTML = addDescription;
+        document.getElementById("newcate" + i).innerHTML = addCategory;
+        document.getElementById("newamount" + i).innerHTML = addAmount;
+        i++;
     }
 
