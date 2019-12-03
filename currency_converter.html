@@ -4,76 +4,48 @@
       <meta charset="utf-8" />
       <title>Currency Converter</title>
       <script type = "text/javascript" src = " https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js"></script>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./NavBar.css">
+  <title>HOME</title>
    </head>
    <body>
+      
+      <nav class="navbar navbar-inverse navbar-fixed-top navbar-dark bg-primary" >
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href='index.html'>
+            Home
+          </a>
+        </div>
+
+        <div id="navbar">
+        <ul class="nav  nav-right">
+          <li class="nav-bookkeeping"><a href="./bookkeeping/bookkeeping.html">Bookkeeping</a></li>
+          <li class="nav-chart"><a href="./charts.html">Charts</a></li>
+          <li class="nav-wishlist"><a href="./wishlist.html">Wishlist</a></li>
+          <li class="nav-convert"><a href="./currency_converter.html">Convert</a></li>
+          <li><a href="#">My Account</a></li>
+        </ul>
+        </div>
+      </div>
+    </nav>
+
       <style>
          #databinding{
             padding: 20px 15px 15px 15px;
             margin: 0 0 25px 0;
             width: auto;
-            background-color: #e7e7e7;
+            background-color: #D3D3D3;
          }
          span, option, input {
             font-size:25px;
          }
-		 .head-bar {
-			height: 20%;
-			width: 100%;
-			margin: 0px 0px;
-			padding: 20px;
-			border: none;
-			border-radius: 1px;
-			text-align:center;
-			text-shadow:2px 2px #000000;
-			background-color: #808080;
-			color: #FFFFFF;
-			font-family:"Times New Roman";
-		 }
-
-		 .back-button {
-			 float:left;
-			 width: 80px;
-			 height: 40px;
-			 display: inline-block;
-			 border-radius: 5px;
-             background-color: #c0c0c0;
-			 border: none;
-			 color: #FFFFFF;
-			 text-align: center;
-			 font-size: 10px;
-			 padding: 0px;
-			 transition: all 0.5s;
-			 cursor: pointer;
-			 margin: 2px;
-		 }
-
-		 .back-button span {
-			 cursor: pointer;
-			 display: inline-block;
-			 position: relative;
-			 transition: 0.5s;
-		 }
-
-		 .back-button span:after {
-			 position: absolute;
-			 right: 0px;
-			 transition: 0.5s;
-		 }
-
-		 .back-button:hover span {
-			 padding-right: 20px;
-		 }
-
-		 .back-button:hover span:after {
-			 opacity: 0;
-			 right: 2px;
-		 }
       </style>
-	  <div class="head-bar">
-	  <a href="./index.html">
-		<button class="back-button"><span> &#8592; </span></button>  
-      </a>		
-      </div>
       <div id = "databinding" style = "">
          <h2>Currency Converter</h2>
          <span>Input:</span><input type = "number" v-model.number = "amount" placeholder = "Input Amount..." /><br/><br/>
