@@ -24,6 +24,12 @@ var LineChartOption = {
     },
     series: [{
         center : ['50%', '50%'],
+        label: {
+            normal: {
+                show: true,
+                position: 'top'
+            }
+        },
         data: [820, 932, 901, 934, 1290, 1330, 1320, 693, 788, 1573, 973, 1160],
         type: 'line'
     }]
@@ -51,14 +57,14 @@ PieOption = {
     },
     series: [
         {
-            name:'Ratio',
+            name:'Radio',
             type:'pie',
-            radius: ['60%', '80%'],
+            radius: ['50%', '70%'],
             avoidLabelOverlap: false,
             label: {
                 normal: {
-                    show: false,
-                    position: 'center'
+                    show: true,
+                    position: 'outside'
                 },
                 emphasis: {
                     show: true,
@@ -70,7 +76,7 @@ PieOption = {
             },
             labelLine: {
                 normal: {
-                    show: false
+                    show: true
                 }
             },
             data:[
