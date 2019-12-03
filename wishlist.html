@@ -9,7 +9,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <title>WishList</title>
   </head>
   <body>
@@ -37,8 +37,8 @@ var r=rank.value
 	}
 function disp_prompt()
 {
-	var name=prompt("请输入您的名字","xxx"); // 弹出input框
-	alert(name);
+
+	alert("wishlist is used to record your wish p[-roduct");
 }
 function f1()
 {
@@ -144,7 +144,11 @@ function del()
   <div class="col-md-4"><button type="button" class="btn btn-info" >
   Back
 </button></div>
-  <div class="col-md-4 text-center content"><h1 >WishList</h1></div>
+  <div class="col-md-4 text-center content"><h1 >WishList</h1>
+        <button type="button" class="btn btn-default btn-sm" onclick="disp_prompt()">
+          <span class="glyphicon glyphicon-question-sign"></span> Question-sign
+        </button>
+      </div>
   <div class="col-md-4"></div>
 </div>
 <div class="row">
