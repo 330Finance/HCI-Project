@@ -41,11 +41,15 @@ var r=rank.value
 		var b2=document.getElementById("price").value
 		var b3=document.getElementById("time").value
 		var b4=document.getElementById("description").value
-		a1.innerHTML=b1
+var b5=Math.ceil(b2/b3)
+		  if(isNaN(b5)){
+		alert("Please input positive number in time limit and price!!!!")	}else{a1.innerHTML=b1
 		a2.innerHTML=b2
 		a3.innerHTML=b3
 		a4.innerHTML=b4
-		a5.innerHTML=Math.ceil(b2/b3)
+		a5.innerHTML=b5}
+	
+		// a5.innerHTML=Math.ceil(b2/b3)
 	}
 function disp_prompt()
 {
@@ -70,6 +74,10 @@ function del()
 		a4.innerHTML=""
 		a5.innerHTML=""
 }
+function check(){
+	if(NaN(value)){return false;}
+	else{return true;}
+}
 </script>
 
 
@@ -80,7 +88,7 @@ function del()
     <nav class="navbar navbar-inverse navbar-fixed-top navbar-dark bg-primary" >
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href='./index.html'>
+          <a class="navbar-brand" href='index.html'>
             Home
           </a>
         </div>
