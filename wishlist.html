@@ -4,61 +4,55 @@
 
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <meta charset="utf-8"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+<!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"> -->
 
+
+
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./NavBar.css">
     <title>WishList</title>
   </head>
   <body>
 
-  	<script>
-	  	var rank;
-	
-	function update() {
-var r=rank.value
-		var a1=document.getElementById("name"+r)
-		var a2=document.getElementById("price"+r)
-		var a3=document.getElementById("time"+r)
-		var a4=document.getElementById("description"+r)
-		var a5=document.getElementById("money"+r)
 
-		var b1=document.getElementById("name").value
-		var b2=document.getElementById("price").value
-		var b3=document.getElementById("time").value
-		var b4=document.getElementById("description").value
-		a1.innerHTML=b1
-		a2.innerHTML=b2
-		a3.innerHTML=b3
-		a4.innerHTML=b4
-		a5.innerHTML=Math.ceil(b2/b3)
-	}
-function disp_prompt()
-{
-	var name=prompt("请输入您的名字","xxx"); // 弹出input框
-	alert(name);
-}
-function f1()
-{
- rank=document.getElementById("rank")
-}
-function del()
-{
- var rr=document.getElementById("delrank").value
-		var a1=document.getElementById("name"+rr)
-		var a2=document.getElementById("price"+rr)
-		var a3=document.getElementById("time"+rr)
-		var a4=document.getElementById("description"+rr)
-		var a5=document.getElementById("money"+rr)
-		a1.innerHTML="Product Name"
-		a2.innerHTML=""
-		a3.innerHTML=""
-		a4.innerHTML=""
-		a5.innerHTML=""
-}
-</script>
+
+
+
+ <!-- <div class="container-fluid"> -->
+    <nav class="navbar navbar-inverse navbar-fixed-top navbar-dark bg-primary" >
+      <div class="container-fluid">
+        <div class="navbar-header">
+         <li class="navbar-brand"><a onclick="goToHome()">Home</a></li>
+          
+        </div>
+
+        <div id="navbar">
+        <ul class="nav  nav-right">
+           <li class="nav-bookkeeping"><a onclick="goToBKP()">Record</a></li>
+           <li class="nav-chart"><a onclick="goToCharts()">Charts</a></li>
+              <li class="nav-wishlist"><a onclick="goToWishlist()">Wishlist</a></li>
+              <li class="nav-convert"><a onclick="goToConvert()">Convert</a></li>
+          <li><a href="./login.html">Log Out</a></li>
+        </ul>
+        </div>
+      </div>
+    </nav>
+  <!-- </div> -->
+
+
+
+
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -117,11 +111,11 @@ function del()
             <input type="text" class="form-control" id="name">
           </div>
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Price:</label>
+            <label for="recipient-name" class="col-form-label">Price($):</label>
             <input type="text" class="form-control" id="price">
           </div>
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Time limit:</label>
+            <label for="recipient-name" class="col-form-label">Time limit(day):</label>
             <input type="text" class="form-control" id="time">
           </div>
           <div class="form-group">
@@ -137,17 +131,6 @@ function del()
     </div>
   </div>
 </div>
-
-
-
- <div class="row">
- <a href="./index.html">
-  <div class="col-md-4"><button type="button" class="btn btn-info" >
-  Back
-</button></div></a>
-  <div class="col-md-4 text-center content"><h1 >WishList</h1></div>
-  <div class="col-md-4"></div>
-</div>
 <div class="row">
   <div class="col-md-4">
 <div class="panel panel-default">
@@ -157,8 +140,8 @@ function del()
         </p>
     </div>
     <ul class="list-group">
-        <li class="list-group-item">Price:<div id="price1"></div></li>
-        <li class="list-group-item">Time limit:<div id="time1"></div></li>
+        <li class="list-group-item">Price($):<div id="price1"></div></li>
+        <li class="list-group-item">Time limit(day):<div id="time1"></div></li>
         <li class="list-group-item">Description:<div id="description1"></div></li>
         <li class="list-group-item">Money saved per day:<div id="money1"></div></li>
     </ul>
@@ -171,8 +154,8 @@ function del()
         </p>
     </div>
     <ul class="list-group">
-        <li class="list-group-item">Price:<div id="price2"></div></li>
-        <li class="list-group-item">Time limit:<div id="time2"></div></li>
+        <li class="list-group-item">Price($):<div id="price2"></div></li>
+        <li class="list-group-item">Time limit(day):<div id="time2"></div></li>
         <li class="list-group-item">Description:<div id="description2"></div></li>
         <li class="list-group-item">Money saved per day:<div id="money2"></div></li>
     </ul>
@@ -184,8 +167,8 @@ function del()
         </p>
     </div>
     <ul class="list-group">
-        <li class="list-group-item">Price:<div id="price3"></div></li>
-        <li class="list-group-item">Time limit:<div id="time3"></div></li>
+        <li class="list-group-item">Price($):<div id="price3"></div></li>
+        <li class="list-group-item">Time limit(day):<div id="time3"></div></li>
         <li class="list-group-item">Description:<div id="description3"></div></li>
         <li class="list-group-item">Money saved per day:<div id="money3"></div></li>
     </ul>
@@ -201,8 +184,8 @@ function del()
         </p>
     </div>
     <ul class="list-group">
-        <li class="list-group-item">Price:<div id="price4"></div></li>
-        <li class="list-group-item">Time limit:<div id="time4"></div></li>
+        <li class="list-group-item">Price($):<div id="price4"></div></li>
+        <li class="list-group-item">Time limit(day):<div id="time4"></div></li>
         <li class="list-group-item">Description:<div id="description4"></div></li>
         <li class="list-group-item">Money saved per day:<div id="money4"></div></li>
     </ul>
@@ -215,8 +198,8 @@ function del()
         </p>
     </div>
     <ul class="list-group">
-        <li class="list-group-item">Price:<div id="price5"></div></li>
-        <li class="list-group-item">Time limit:<div id="time5"></div></li>
+        <li class="list-group-item">Price($):<div id="price5"></div></li>
+        <li class="list-group-item">Time limit(day):<div id="time5"></div></li>
         <li class="list-group-item">Description:<div id="description5"></div></li>
         <li class="list-group-item">Money saved per day:<div id="money5"></div></li>
     </ul>
@@ -228,8 +211,8 @@ function del()
         </p>
     </div>
     <ul class="list-group">
-        <li class="list-group-item">Price:<div id="price6"></div></li>
-        <li class="list-group-item">Time limit:<div id="time6"></div></li>
+        <li class="list-group-item">Price($):<div id="price6"></div></li>
+        <li class="list-group-item">Time limit(day):<div id="time6"></div></li>
         <li class="list-group-item">Description:<div id="description6"></div></li>
         <li class="list-group-item">Money saved per day:<div id="money6"></div></li>
     </ul>
@@ -250,7 +233,7 @@ function del()
 
 </footer> -->
 <!-- Footer -->
-<footer class="page-footer font-small unique-color-dark pt-4 fixed-bottom">
+<footer class="page-footer font-small unique-color-dark pt-4">
 
   <!-- Footer Elements -->
   <div class="container">
@@ -265,7 +248,6 @@ function del()
       </li>
     </ul> -->
     <!-- Call to action -->
-
 <div class="row">
   <div class="col-md-4 text-center content"><button  type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal">
   Add
@@ -287,8 +269,12 @@ function del()
   <!-- Footer Elements -->
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2019 Copyright:
-    <a href="https://mdbootstrap.com/education/bootstrap/"> LajiHCI.com</a>
+  <div class="footer-copyright text-center py-3">
+
+        <button type="button" class="btn btn-default btn-sm" onclick="disp_prompt()">
+          <span class="glyphicon glyphicon-question-sign"></span> Question-sign
+        </button>
+     
   </div>
   <!-- Copyright -->
 
@@ -300,5 +286,7 @@ function del()
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript" src="wishlist.js"></script>
+
   </body>
 </html>

@@ -31,9 +31,9 @@ body {
   border-bottom: 3px solid #FFFFFF;
   text-decoration: none;
 }
-.navbar-inverse .nav-right .nav-bookkeeping > a {
+/*.navbar-inverse .nav-right .nav-bookkeeping > a {
   border-bottom: 3px solid #FFFFFF;
-}
+}*/
 
 /* logo position */
 .navbar-brand {
