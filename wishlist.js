@@ -63,7 +63,7 @@ var b5=Math.ceil(b2/b3)
     if (jsonstring === "") ;
     else {
         ds = JSON.parse(decodeURI(jsonstring.substr(1)));
-        if(ds["wlprice"]===""){ document.getElementById("name" + 1).innerHTML = "Product Name";}
+        if(ds["wlprice"]===""){ document.getElementById("name" + 1).innerHTML = "Product Name:";}
         else{
         document.getElementById("name" + 1).innerHTML = ds["wlname"];}
 
@@ -107,7 +107,7 @@ function goToConvert() {
 function disp_prompt()
 {
 
-    alert("wishlist is used to record your wish product");
+    alert("only rank1 is used to record your wish product");
 }
 function f1()
 {

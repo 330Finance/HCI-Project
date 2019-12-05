@@ -24,6 +24,7 @@
 
   .heading1{
     font-size: 200px;
+	marigin : -20px;
   }
 </style>
   <title>HOME</title>
@@ -41,7 +42,7 @@
 
       <div id="navbar">
       <ul class="nav  nav-right">
-        <li class="nav-bookkeeping"><a onclick="goToBKP()">Bookkeeping</a></li>
+        <li class="nav-bookkeeping"><a onclick="goToBKP()">Record</a></li>
         <li class="nav-chart"><a onclick="goToCharts()">Charts</a></li>
         <li class="nav-wishlist"><a onclick="goToWishlist()">Wishlist</a></li>
         <li class="nav-convert"><a onclick="goToConvert()">Convert</a></li>
@@ -53,7 +54,7 @@
   <div class="row">
     <div class="column">
       <h1> My monthly Balance is</h1>
-      <p class="heading1" id = "homeAmount"></p>
+      <h1 class = "heading1"><span class="heading1" id = "homeAmount"></span><span>$</span></h1>
     </div>
   </div>
 

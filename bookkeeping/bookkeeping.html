@@ -21,18 +21,16 @@
 	<nav class="navbar navbar-inverse navbar-fixed-top navbar-dark bg-primary" >
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="../index.html">
-					Home
-				</a>
+				<li class="navbar-brand"><a onclick="goToIndex()">Home</a></li>
 			</div>
 
 			<div id="navbar">
 			<!-- <div id="navbar" class="collapse navbar-collapse"> -->
 			<ul class="nav  nav-right">
-				<li class="nav-bookkeeping"><a href="bookkeeping.html">Bookkeeping</a></li>
-				<li class="nav-chart"><a href="../charts.html">Charts</a></li>
-				<li class="nav-wishlist"><a href="../wishlist.html">Wishlist</a></li>
-				<li class="nav-convert"><a href="../currency_converter.html">Convert</a></li>
+				<li class="nav-bookkeeping"><a onclick="goToBKP()">Record</a></li>
+				<li class="nav-chart"><a onclick="goToCharts()">Charts</a></li>
+				<li class="nav-wishlist"><a onclick="goToWishlist()">Wishlist</a></li>
+				<li class="nav-convert"><a onclick="goToConvert()">Convert</a></li>
 				<li><a href="../login.html">Log Out</a></li>
 			</ul>
 			</div>
@@ -42,14 +40,14 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-9 col-md-9 main" id="transactionstable">
-				<h1 class="page-header">Bookkeeping</h1>
+				<h1 class="page-header">Record List</h1>
 				<table id='bookkeepings' class="table table-striped">
 					<thead>
 						<tr>
 							<th>Date</th>
 							<th>Desription</th>
 							<th>Category</th>
-							<th>Amount</th>
+							<th>Amount ($)</th>
 						</tr>
 					</thead>
 

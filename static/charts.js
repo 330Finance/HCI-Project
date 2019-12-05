@@ -1,4 +1,6 @@
 var Chart = echarts.init(document.getElementById('Chart'));
+//var JSONTest = {"Month": ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'], "valuePerMonth": [820, 932, 901, 934, 1290, 1330, 1320, 693, 788, 1573, 973, 1160]};
+var ds;
 
 var LineChartOption = {
     title: {
@@ -120,4 +122,43 @@ function changePie() {
         Chart.setOption(ChartOption);
         document.getElementById("changeChartBtn").innerText = "Pie";
     }
+}
+
+function initial() {
+    var jsonstring = window.location.hash;
+    if (jsonstring === "") ;
+    else {
+        ds = JSON.parse(decodeURI(jsonstring.substr(1)));
+    }
+}
+
+initial();
+
+function goToHome() {
+    var url = "./index.html";
+    url += '#' + encodeURI(JSON.stringify(ds));
+    window.location.href = url;
+}
+
+function goToBKP() {
+    var url = "./bookkeeping/bookkeeping.html";
+    url += '#' + encodeURI(JSON.stringify(ds));
+    window.location.href = url;
+}
+
+function goToCharts() {
+    var url = "./charts.html";
+    url += '#' + encodeURI(JSON.stringify(ds));
+    window.location.href = url;
+}
+
+function goToWishlist() {
+    var url = "./wishlist.html";
+    url += '#' + encodeURI(JSON.stringify(ds));
+    window.location.href = url;
+}
+function goToConvert() {
+    var url = "./currency_converter.html";
+    url += '#' + encodeURI(JSON.stringify(ds));
+    window.location.href = url;
 }
